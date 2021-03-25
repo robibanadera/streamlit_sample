@@ -23,13 +23,13 @@ percentages = pd.merge(confirmed_cases_full, deaths_full, how='left').merge(reco
 percentages['%_deaths'] = (percentages['deaths']/percentages['confirmed_cases'])*100
 percentages['%_recovered'] = (percentages['recovered']/percentages['confirmed_cases'])*100
 
-pages = st.sidebar.radio('Page Navigation', ['Overview', 'Exploring USA', 'Recommendations'])
+pages = st.sidebar.radio('Page Navigation', ['Overview', 'Exploring USA'])
 
 if pages == 'Overview':
     option = st.selectbox(
-        'What do you want to see?',
+        'Choose the statistic to review:',
         ('Confirmed Cases', 'Deaths', '% Deaths', 'Recovered', '% Recovered'))
-    number = int(st.text_input('How many countries do you want to be shown? Input a number not more than 201', '10'))
+    number = int(st.text_input('Choose the number of countries to be included. Input a number not more than 201:', '20'))
     
     if st.button('Show Plot'):
         if option == 'Confirmed Cases':
