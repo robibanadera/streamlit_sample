@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
 from PIL import Image
-warnings.filterwarnings("ignore")
 pd.set_option("display.max_columns", 100)
 
 st.set_page_config(
