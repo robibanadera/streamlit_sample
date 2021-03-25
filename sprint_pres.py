@@ -1,8 +1,5 @@
 import pandas as pd
 import numpy as np
-import warnings
-from sklearn.impute import SimpleImputer
-import bar_chart_race as bcr
 import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
